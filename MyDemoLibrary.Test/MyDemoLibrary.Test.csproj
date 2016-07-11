@@ -70,6 +70,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyDemoLibrary\MyDemoLibrary.csproj">
+      <Project>{3878245B-4E8A-497B-9189-9AAE7B7CB386}</Project>
+      <Name>MyDemoLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -6,6 +6,8 @@ namespace MyDemoLibrary.Test
     [Binding]
     public class CalculatorSteps
     {
+        private Calculator calculator = new Calculator();
+
         [Given(@"I have entered (.*) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(int p0)
         {
