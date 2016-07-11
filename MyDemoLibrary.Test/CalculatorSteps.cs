@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TechTalk.SpecFlow;
 
 namespace MyDemoLibrary.Test
@@ -21,9 +22,9 @@ namespace MyDemoLibrary.Test
         }
         
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        public void ThenTheResultShouldBeOnTheScreen(int result)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(result, calculator.Total);
         }
     }
 }
