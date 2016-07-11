@@ -9,9 +9,9 @@ namespace MyDemoLibrary.Test
         private Calculator calculator = new Calculator();
 
         [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        public void GivenIHaveEnteredIntoTheCalculator(int number)
         {
-            ScenarioContext.Current.Pending();
+            calculator.AddNumber(number);
         }
         
         [When(@"I press add")]
