@@ -17,7 +17,7 @@ namespace MyDemoLibrary.Test
         [When(@"I press add")]
         public void WhenIPressAdd()
         {
-            ScenarioContext.Current.Pending();
+            calculator.DoCalculate();
         }
         
         [Then(@"the result should be (.*) on the screen")]

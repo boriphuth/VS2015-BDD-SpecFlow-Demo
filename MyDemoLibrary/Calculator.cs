@@ -6,6 +6,7 @@ namespace MyDemoLibrary
     public class Calculator
     {
         private List<int> numbers;
+        public int Total { get; private set; }
 
         public Calculator()
         {
@@ -15,6 +16,15 @@ namespace MyDemoLibrary
         public void AddNumber(int number)
         {
             numbers.Add(number);
+        }
+
+        public void DoCalculate()
+        {
+            Total = 0;
+            foreach (int number in numbers)
+            {
+                Total += number;
+            }
         }
     }
 }
